@@ -17,6 +17,9 @@ module.exports = {
       screens: {
         md: "768px",
       },
+      shadow:{
+        diceShadow: "0px 0px 15px 5px hsl(150, 100%, 66%)"
+      }
     },
   },
   plugins: [],
