@@ -1,7 +1,9 @@
+import Card from "./components/Card";
+
 const App = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <div className="bg-neutral-darkBlue h-[100vh] flex justify-center items-center">
+      <Card/>
     </div>
   );
 };
