@@ -5,6 +5,7 @@ import patternDesktop from "../assets/pattern-divider-desktop.svg";
 import patternMobile from "../assets/pattern-divider-mobile.svg";
 import dice from "../assets/icon-dice.svg";
 import { API_URL } from "../util/api";
+import { motion } from "framer-motion";
 
 const Card = () => {
   const [id, setId] = useState(0);
@@ -22,12 +23,29 @@ const Card = () => {
 
   useEffect(() => {
     generateAdvice();
-  },[])
+  }, []);
 
   return (
-    <div
+    <motion.div
+      initial={{
+        opacity: 0,
+        translateX: -500,
+      }}
+      animate={{
+        opacity: 1,
+        translateX: 0,
+      }}
+      transition={{
+        delay: 0.5,
+        x: { duration: 1 },
+        default: { ease: "linear" },
+      }}
+      whileHover={{
+        translateY: 20,
+        transition: { duration: 0.3 },
+      }}
       id="card"
-      className="bg-neutral-darkGrayishBlue flex flex-col justify-center w-[90%] h-[350px] md:w-[500px] md:h-[320px] px-[20px] py-[40px] text-center rounded-xl shadow-xl relative"
+      className="bg-neutral-darkGrayishBlue cursor-pointer flex flex-col justify-center w-[90%] h-[350px] md:w-[500px] md:h-[320px] px-[20px] py-[40px] text-center rounded-xl shadow-xl relative"
     >
       <p className="mb-4 uppercase tracking-[4px] text-primary-neonGreen text-[14px]">
         Advice #{id}
@@ -59,9 +77,13 @@ const Card = () => {
         onClick={generateAdvice}
         className="absolute left-[50%] -translate-x-[50%] -bottom-[28px] md:-bottom-[25px] bg-primary-neonGreen w-[65px] h-[65px] md:w-[50px] md:h-[50px] rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 hover:shadow-[0_0_20px_1px_rgba(82,255,168,1)]"
       >
-        <img className="w-[25px] md:w-[20px] animate-spin" src={dice} alt="dice" />
+        <img
+          className="w-[25px] md:w-[20px] animate-spin"
+          src={dice}
+          alt="dice"
+        />
       </button>
-    </div>
+    </motion.div>
   );
 };
 
