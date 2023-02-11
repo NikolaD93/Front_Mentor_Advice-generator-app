@@ -1,5 +1,9 @@
 This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
+# [Live Website Preview](https://advicegeneratornikola93.netlify.app/).
+
+# [YT Video Preview](https://youtu.be/svF1BAB8iRw).
+
 Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
@@ -7,6 +11,4 @@ Users should be able to:
 - Generate a new piece of advice by clicking the dice icon
 - I also added ligt/dark mode theme switcher
 
-# live: https://advicegeneratornikola93.netlify.app/
-# video: https://youtu.be/svF1BAB8iRw
 ![Screen Capture 012 - Advice Generator - localhost](https://user-images.githubusercontent.com/95870159/209172140-e5772bfc-95e3-472e-9638-6398e8b5a5c4.jpg)
